@@ -2,4 +2,4 @@
 
 Сборка под Linux (работоспособность не проверена) - https://drive.google.com/open?id=1y2T8vxmD89A-VXBlvTibPifLd0yLtszw
 
-Сборка под MacOS -
+Сборка под MacOS - https://drive.google.com/open?id=1wrqT4WsczVd7Sw8HBWoG3vcaGzKSbt13
