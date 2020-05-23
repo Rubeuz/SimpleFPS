@@ -1,0 +1,25 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+
+#include "MedKit.h"
+#include "FPSCharacter.h"
+
+// Sets default values
+AMedKit::AMedKit()
+{
+	OnActorBeginOverlap.AddDynamic(this, &AMedKit::OnOverlap);
+}
+
+void AMedKit::OnOverlap(AActor* MyOverlappedActor, AActor* OtherActor)
+{
+	if (OtherActor != nullptr && OtherActor != this)
+	{
+		MyCharacter = Cast<AFPSCharacter>(OtherActor);
+
+		if (MyCharacter && MyCharacter->GetHealth() < 1.0f)
+		{
+			MyCharacter->UpdateHealth(500.0f);
+			Destroy();
+		}
+	}
+}
